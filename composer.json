@@ -1,6 +1,6 @@
 {
-  "name": "maiconpinto/cakephp-adminlte-theme",
-  "description": "CakePHP 3.x AdminLTE Theme.",
+  "name": "simtecsystem/cakephp-adminlte-theme",
+  "description": "CakePHP 3.x AdminLTE Theme 3.",
   "type": "cakephp-plugin",
   "keywords": ["cakephp", "templates", "plugin"],
   "homepage": "https://github.com/maiconpinto/cakephp-adminlte-theme",
@@ -11,6 +11,11 @@
       "email": "maiconsilva.pinto@gmail.com",
       "homepage": "https://www.maiconpinto.com.br/",
       "role": "Author"
+    },{
+      "name": "SimTEC-System",
+      "email": "info@simtec-system.de",
+      "homepage": "https://www.simtec-system.de/",
+      "role": "Author (Fork)"
     }
   ],
   "require": {
@@ -26,8 +31,8 @@
     }
   },
   "support": {
-    "issues": "https://github.com/maiconpinto/cakephp-adminlte-theme/issues",
-    "source": "https://github.com/maiconpinto/cakephp-adminlte-theme"
+    "issues": "https://github.com/simtecsystem/cakephp-adminlte-theme/issues",
+    "source": "https://github.com/simtecsystem/cakephp-adminlte-theme"
   }
 }
 
