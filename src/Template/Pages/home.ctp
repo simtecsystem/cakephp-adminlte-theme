@@ -598,10 +598,11 @@
 <?php echo $this->Html->script('AdminLTE./js/demo'); ?>
 
 <!-- PAGE PLUGINS -->
-<!-- jQuery Mapael -->
-<?php echo $this->Html->script('AdminLTE./plugins/jquery-mapael/maps/usa_states.min'); ?>
 <!-- ChartJS -->
 <?php echo $this->Html->script('AdminLTE./plugins/chart.js/Chart.min'); ?>
+<!-- JQVMap -->
+<?php echo $this->Html->script('AdminLTE./plugins/jqvmap/jquery.vmap.min'); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/jqvmap/maps/jquery.vmap.usa'); ?>
 
 <!-- PAGE SCRIPTS -->
 <?php echo $this->Html->script('AdminLTE./js/pages/dashboard'); ?>

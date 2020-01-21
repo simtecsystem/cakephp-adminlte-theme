@@ -65,23 +65,25 @@
     </div>
     <!-- ./wrapper -->
 
+    <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
     <?php echo $this->Html->script('AdminLTE./plugins/jquery/jquery.min'); ?>
+    <!-- Bootstrap 4 -->
+    <?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.min'); ?>
+    <!-- overlayScrollbars -->
+    <?php echo $this->Html->script('AdminLTE./plugins/overlayScrollbars/js/jquery.overlayScrollbars.min'); ?>
+    <!-- AdminLTE App -->
+    <?php echo $this->Html->script('AdminLTE.adminlte.min'); ?>
+
     <!-- jQuery UI 1.11.4 -->
     <?php echo $this->Html->script('AdminLTE./plugins/jquery-ui/jquery-ui.min'); ?>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
-    <!-- Bootstrap 4 -->
-    <?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.min'); ?>
-    <!-- ChartJS -->
-    <?php echo $this->Html->script('AdminLTE./plugins/chart.js/Chart.min'); ?>
+
     <!-- Sparkline -->
     <?php echo $this->Html->script('AdminLTE./plugins/sparklines/sparkline'); ?>
-    <!-- JQVMap -->
-    <?php echo $this->Html->script('AdminLTE./plugins/jqvmap/jquery.vmap.min'); ?>
-    <?php echo $this->Html->script('AdminLTE./plugins/jqvmap/maps/jquery.vmap.usa'); ?>
     <!-- jQuery Knob Chart -->
     <?php echo $this->Html->script('AdminLTE./plugins/jquery-knob/jquery.knob.min'); ?>
     <!-- daterangepicker -->
@@ -91,10 +93,6 @@
     <?php echo $this->Html->script('AdminLTE./plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min'); ?>
     <!-- Summernote -->
     <?php echo $this->Html->script('AdminLTE./plugins/summernote/summernote-bs4.min'); ?>
-    <!-- overlayScrollbars -->
-    <?php echo $this->Html->script('AdminLTE./plugins/overlayScrollbars/js/jquery.overlayScrollbars.min'); ?>
-    <!-- AdminLTE App -->
-    <?php echo $this->Html->script('AdminLTE.adminlte.min'); ?>
     <!-- FastClick -->
     <?php echo $this->Html->script('AdminLTE./plugins/fastclick/fastclick'); ?>
 
