@@ -1,10 +1,7 @@
 <footer class="main-footer">
-  <?php if (isset($layout) && $layout == 'top'): ?>
-  <div class="container">
-  <?php endif; ?>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  <?php if (isset($layout) && $layout == 'top'): ?>
-  </div>
-  <?php endif; ?>
+    <strong>Copyright © 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.0.2
+    </div>
 </footer>
