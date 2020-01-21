@@ -10,6 +10,8 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Font Awesome -->
     <?php echo $this->Html->css('AdminLTE./plugins/fontawesome-free/css/all.min'); ?>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <?php echo $this->Html->css('AdminLTE./plugins/chart.js/Chart.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/icheck-bootstrap/icheck-bootstrap.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/jqvmap/jqvmap.min'); ?>
@@ -33,13 +35,10 @@
     <?php echo $this->fetch('css'); ?>
 
 </head>
-<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> sidebar-mini">
+<body class="sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        <header class="main-header">
-            <!-- Header Navbar: style can be found in header.less -->
-            <?php echo $this->element('nav-top'); ?>
-        </header>
+        <?php echo $this->element('nav-top'); ?>
 
         <?php echo $this->element('aside-main-sidebar'); ?>
 
