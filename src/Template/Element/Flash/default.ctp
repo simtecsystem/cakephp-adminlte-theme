@@ -1,7 +1,7 @@
 <section class="content-header">
     <div class="alert alert-info alert-dismissible">
-        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-        <h4><i class="icon fa fa-info"></i> <?= __('Alert') ?>!</h4>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">&times;</button>
+        <h5><i class="icon fas fa-check"></i> <?= __('Alert') ?>!</h5>
         <?= h($message) ?>
     </div>
 </section>
