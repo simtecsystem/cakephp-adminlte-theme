@@ -30,14 +30,14 @@
     <div class="row">
       <div class="col-md-12">
         <!-- general form elements -->
-        <div class="box box-primary">
-          <div class="box-header with-border">
-            <h3 class="box-title"><?php echo __('Form'); ?></h3>
+        <div class="card card-primary">
+          <div class="card-header with-border">
+            <h3 class="card-title"><?php echo __('Form'); ?></h3>
           </div>
-          <!-- /.box-header -->
+          <!-- /.card-header -->
           <!-- form start -->
           <?php echo $this->Form->create(${{ singularVar }}, ['role' => 'form']); ?>
-            <div class="box-body">
+            <div class="card-body">
               <?php
 {% for field in fields if field not in primaryKey %}
     {%- if keyFields[field] %}
@@ -69,13 +69,13 @@
 {% endif %}
               ?>
             </div>
-            <!-- /.box-body -->
+            <!-- /.card-body -->
 
           <?php echo $this->Form->submit(__('Submit')); ?>
 
           <?php echo $this->Form->end(); ?>
         </div>
-        <!-- /.box -->
+        <!-- /.card -->
       </div>
   </div>
   <!-- /.row -->
