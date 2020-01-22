@@ -15,12 +15,12 @@
     <?php echo $this->Html->css('AdminLTE./plugins/chart.js/Chart.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/icheck-bootstrap/icheck-bootstrap.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/jqvmap/jqvmap.min'); ?>
-    <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/overlayScrollbars/css/OverlayScrollbars.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/daterangepicker/daterangepicker'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/summernote/summernote-bs4'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/select2/css/select2.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/select2-bootstrap4-theme/select2-bootstrap4.min'); ?>
+    <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
 
