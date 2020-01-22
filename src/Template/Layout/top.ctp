@@ -7,17 +7,16 @@
   <title><?php echo Configure::read('Theme.title'); ?> | <?php echo $this->fetch('title'); ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <?php echo $this->Html->css('AdminLTE./bower_components/bootstrap/dist/css/bootstrap.min'); ?>
-  <!-- Font Awesome -->
-  <?php echo $this->Html->css('AdminLTE./bower_components/font-awesome/css/font-awesome.min'); ?>
-  <!-- Ionicons -->
-  <?php echo $this->Html->css('AdminLTE./bower_components/Ionicons/css/ionicons.min'); ?>
-  <!-- Theme style -->
-  <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <?php echo $this->Html->css('AdminLTE.skins/_all-skins.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/fontawesome-free/css/all.min'); ?>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <?php echo $this->Html->css('AdminLTE./plugins/chart.js/Chart.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/icheck-bootstrap/icheck-bootstrap.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/jqvmap/jqvmap.min'); ?>
+    <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/overlayScrollbars/css/OverlayScrollbars.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/daterangepicker/daterangepicker'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/summernote/summernote-bs4'); ?>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,20 +56,39 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 3 -->
-<?php echo $this->Html->script('AdminLTE./bower_components/jquery/dist/jquery.min'); ?>
-<!-- Bootstrap 3.3.7 -->
-<?php echo $this->Html->script('AdminLTE./bower_components/bootstrap/dist/js/bootstrap.min'); ?>
-<!-- SlimScroll -->
-<?php echo $this->Html->script('AdminLTE./bower_components/jquery-slimscroll/jquery.slimscroll.min'); ?>
-<!-- FastClick -->
-<?php echo $this->Html->script('AdminLTE./bower_components/fastclick/lib/fastclick'); ?>
-<!-- AdminLTE App -->
-<?php echo $this->Html->script('AdminLTE.adminlte.min'); ?>
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <?php echo $this->Html->script('AdminLTE./plugins/jquery/jquery.min'); ?>
+    <!-- Bootstrap 4 -->
+    <?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.min'); ?>
+    <!-- overlayScrollbars -->
+    <?php echo $this->Html->script('AdminLTE./plugins/overlayScrollbars/js/jquery.overlayScrollbars.min'); ?>
+    <!-- AdminLTE App -->
+    <?php echo $this->Html->script('AdminLTE.adminlte.min'); ?>
 
-<?php echo $this->fetch('script'); ?>
+    <!-- jQuery UI 1.11.4 -->
+    <?php echo $this->Html->script('AdminLTE./plugins/jquery-ui/jquery-ui.min'); ?>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
 
-<?php echo $this->fetch('scriptBottom'); ?>
+    <!-- Sparkline -->
+    <?php echo $this->Html->script('AdminLTE./plugins/sparklines/sparkline'); ?>
+    <!-- jQuery Knob Chart -->
+    <?php echo $this->Html->script('AdminLTE./plugins/jquery-knob/jquery.knob.min'); ?>
+    <!-- daterangepicker -->
+    <?php echo $this->Html->script('AdminLTE./plugins/moment/moment.min'); ?>
+    <?php echo $this->Html->script('AdminLTE./plugins/daterangepicker/daterangepicker'); ?>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <?php echo $this->Html->script('AdminLTE./plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min'); ?>
+    <!-- Summernote -->
+    <?php echo $this->Html->script('AdminLTE./plugins/summernote/summernote-bs4.min'); ?>
+    <!-- FastClick -->
+    <?php echo $this->Html->script('AdminLTE./plugins/fastclick/fastclick'); ?>
+
+    <?php echo $this->fetch('script'); ?>
+    <?php echo $this->fetch('scriptBottom'); ?>
 
 </body>
 </html>

@@ -7,43 +7,32 @@
     <title><?php echo Configure::read('Theme.title'); ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
-    <?php echo $this->Html->css('AdminLTE./bootstrap/css/bootstrap.min'); ?>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <?php echo $this->Html->css('AdminLTE./plugins/fontawesome-free/css/all.min'); ?>
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- icheck bootstrap -->
+    <?php echo $this->Html->css('AdminLTE./plugins/icheck-bootstrap/icheck-bootstrap.min'); ?>
     <!-- Theme style -->
     <?php echo $this->Html->css('AdminLTE.AdminLTE.min'); ?>
-<!-- AdminLTE Skins. Choose a skin from the css/skins
-    folder instead of downloading all of them to reduce the load. -->
-    <?php echo $this->Html->css('AdminLTE.skins/skin-'. Configure::read('Theme.skin') .'.min'); ?>
-
-    <?php echo $this->fetch('css'); ?>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <?php echo $this->fetch('css'); ?>
 </head>
 <!-- ADD THE CLASS sidedar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
-<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> sidebar-collapse sidebar-mini">
+<body class="hold-transition sidebar-mini sidebar-collapse">
     <!-- Site wrapper -->
     <div class="wrapper">
 
-        <header class="main-header">
-            <!-- Logo -->
-            <a href="<?php echo $this->Url->build('/'); ?>" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><?php echo Configure::read('Theme.logo.mini'); ?></span>
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><?php echo Configure::read('Theme.logo.large'); ?></span>
-            </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <?php echo $this->element('nav-top') ?>
-        </header>
+        <?php echo $this->element('nav-top') ?>
 
         <!-- =============================================== -->
 
@@ -67,38 +56,20 @@
         <?php echo $this->element('aside-control-sidebar'); ?>
 
         <!-- /.control-sidebar -->
-<!-- Add the sidebar's background. This div must be placed
-    immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+        <!-- Add the sidebar's background. This div must be placed
+            immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
 
-<!-- jQuery 2.2.3 -->
-<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jquery-2.2.3.min'); ?>
-<!-- Bootstrap 3.3.5 -->
-<?php echo $this->Html->script('AdminLTE./bootstrap/js/bootstrap.min'); ?>
-<!-- SlimScroll -->
-<?php echo $this->Html->script('AdminLTE./plugins/slimScroll/jquery.slimscroll.min'); ?>
-<!-- FastClick -->
-<?php echo $this->Html->script('AdminLTE./plugins/fastclick/fastclick'); ?>
-<!-- AdminLTE App -->
-<?php echo $this->Html->script('AdminLTE./js/app.min'); ?>
-<!-- AdminLTE for demo purposes -->
-<?php echo $this->fetch('script'); ?>
-<?php echo $this->fetch('scriptBottom'); ?>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".navbar .menu").slimscroll({
-            height: "200px",
-            alwaysVisible: false,
-            size: "3px"
-        }).css("width", "100%");
+    <!-- jQuery -->
+    <?php echo $this->Html->script('AdminLTE./plugins/jquery/jquery.min'); ?>
+    <!-- Bootstrap 4 -->
+    <?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.bundle.min'); ?>
+    <!-- AdminLTE App -->
+    <?php echo $this->Html->script('AdminLTE./js/adminlte.min'); ?>
 
-        var a = $('a[href="<?php echo $this->request->getAttribute('webroot') . $this->request->getPath() ?>"]');
-        if (!a.parent().hasClass('treeview')) {
-            a.parent().addClass('active').parents('.treeview').addClass('active');
-        }
-    });
-</script>
+    <?php echo $this->fetch('script'); ?>
+    <?php echo $this->fetch('scriptBottom'); ?>
 </body>
 </html>

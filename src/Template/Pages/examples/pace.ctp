@@ -1,74 +1,53 @@
 <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Pace page
-        <small>Loading example</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Pace page</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <!-- Default box -->
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-              <i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fa fa-times"></i></button>
-          </div>
-        </div>
-        <div class="box-body">
-          Pace loading works automatically on page. You can still implement it with ajax requests by adding this js:
-          <br/><code>$(document).ajaxStart(function() { Pace.restart(); });</code>
-          <br/>
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <button type="button" class="btn btn-default btn-lrg ajax" title="Ajax Request">
-                <i class="fa fa-spin fa-refresh"></i>&nbsp; Get External Content
-              </button>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Pace</h1>
             </div>
-          </div>
-          <div class="ajax-content">
-          </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Pace</li>
+                </ol>
+            </div>
         </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-          Footer
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Title</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i></button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                    <i class="fas fa-times"></i></button>
+            </div>
         </div>
-        <!-- /.box-footer-->
-      </div>
-      <!-- /.box -->
+        <div class="card-body">
+            Start creating your amazing application!
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            Footer
+        </div>
+        <!-- /.card-footer-->
+    </div>
+    <!-- /.card -->
 
-    </section>
-    <!-- /.content -->
+</section>
+<!-- /.content -->
+<?php $this->start('script');?>
+<!-- OPTIONAL SCRIPTS -->
+<?php echo $this->Html->script('AdminLTE./js/demo'); ?>
+<?php $this->end();?>
 
-<!-- Pace style -->
-<?php echo $this->Html->css('AdminLTE./plugins/pace/pace.min', ['block' => 'css']); ?>
-
-<!-- PACE -->
-<?php echo $this->Html->script('AdminLTE./bower_components/PACE/pace.min', ['block' => 'script']); ?>
-
-<?php $this->start('scriptBottom'); ?>
-<script type="text/javascript">
-  // To make Pace works on Ajax calls
-  $(document).ajaxStart(function () {
-    Pace.restart()
-  })
-  $('.ajax').click(function () {
-    $.ajax({
-      url: '#', success: function (result) {
-        $('.ajax-content').html('<hr>Ajax Request Completed !')
-      }
-    })
-  })
-</script>
-<?php $this->end(); ?>
+<?php $this->start('css');?>
+<?php echo $this->Html->css('AdminLTE./plugins/pace-progress/themes/black/pace-theme-flat-top'); ?>
+<?php $this->end();?>

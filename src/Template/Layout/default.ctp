@@ -19,6 +19,8 @@
     <?php echo $this->Html->css('AdminLTE./plugins/overlayScrollbars/css/OverlayScrollbars.min'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/daterangepicker/daterangepicker'); ?>
     <?php echo $this->Html->css('AdminLTE./plugins/summernote/summernote-bs4'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/select2/css/select2.min'); ?>
+    <?php echo $this->Html->css('AdminLTE./plugins/select2-bootstrap4-theme/select2-bootstrap4.min'); ?>
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
 
@@ -37,7 +39,6 @@
 </head>
 <body class="sidebar-mini layout-fixed">
     <div class="wrapper">
-
         <?php echo $this->element('nav-top'); ?>
 
         <?php echo $this->element('aside-main-sidebar'); ?>
@@ -68,7 +69,7 @@
     <!-- jQuery -->
     <?php echo $this->Html->script('AdminLTE./plugins/jquery/jquery.min'); ?>
     <!-- Bootstrap 4 -->
-    <?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.min'); ?>
+    <?php echo $this->Html->script('AdminLTE./plugins/bootstrap/js/bootstrap.bundle.min'); ?>
     <!-- overlayScrollbars -->
     <?php echo $this->Html->script('AdminLTE./plugins/overlayScrollbars/js/jquery.overlayScrollbars.min'); ?>
     <!-- AdminLTE App -->
@@ -94,8 +95,11 @@
     <?php echo $this->Html->script('AdminLTE./plugins/summernote/summernote-bs4.min'); ?>
     <!-- FastClick -->
     <?php echo $this->Html->script('AdminLTE./plugins/fastclick/fastclick'); ?>
+    <!-- Select2 -->
+    <?php echo $this->Html->script('AdminLTE./plugins/select2/js/select2.full.min'); ?>
 
     <?php echo $this->fetch('script'); ?>
     <?php echo $this->fetch('scriptBottom'); ?>
 </body>
 </html>
+   ui
