@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <a href="mailbox.html" class="btn btn-primary btn-block mb-3">Back to Inbox</a>
+                <a href="/pages/mailbox/mailbox" class="btn btn-primary btn-block mb-3">Back to Inbox</a>
 
                 <div class="card">
                     <div class="card-header">
@@ -189,7 +189,7 @@
                                 </div>
                             </li>
                             <li>
-                                <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo1.png" alt="Attachment"></span>
+                                <span class="mailbox-attachment-icon has-img"><?php echo $this->Html->image('AdminLTE.photo1.png', ['alt' => 'Attachment']); ?></span>
 
                                 <div class="mailbox-attachment-info">
                                     <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i> photo1.png</a>
@@ -200,7 +200,7 @@
                                 </div>
                             </li>
                             <li>
-                                <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo2.png" alt="Attachment"></span>
+                                <span class="mailbox-attachment-icon has-img"><?php echo $this->Html->image('AdminLTE.photo2.png', ['alt' => 'Attachment']); ?></span>
 
                                 <div class="mailbox-attachment-info">
                                     <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i> photo2.png</a>

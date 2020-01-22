@@ -19,7 +19,7 @@
 <section class="content">
     <div class="row">
         <div class="col-md-3">
-            <a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>
+            <a href="/pages/mailbox/compose" class="btn btn-primary btn-block mb-3">Compose</a>
 
             <div class="card">
                 <div class="card-header">
@@ -150,7 +150,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"></td>
@@ -164,7 +164,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -178,7 +178,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -192,7 +192,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"></td>
@@ -206,7 +206,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -220,7 +220,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -234,7 +234,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -248,7 +248,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"></td>
@@ -262,7 +262,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"></td>
@@ -276,7 +276,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"></td>
@@ -290,7 +290,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -304,7 +304,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"></td>
@@ -318,7 +318,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -332,7 +332,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
@@ -346,7 +346,7 @@
                                     </div>
                                 </td>
                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-name"><a href="/pages/mailbox/read-mail">Alexander Pierce</a></td>
                                 <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
                                 </td>
                                 <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
