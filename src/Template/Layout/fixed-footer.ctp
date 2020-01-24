@@ -32,12 +32,12 @@
     <!-- Site wrapper -->
     <div class="wrapper">
 
-        <?php echo $this->element('nav-top') ?>
+        <?php echo $this->element('AdminLTE.nav-top') ?>
 
         <!-- =============================================== -->
 
         <!-- Left side column. contains the sidebar -->
-        <?php echo $this->element('aside-main-sidebar'); ?>
+        <?php echo $this->element('AdminLTE.aside-main-sidebar'); ?>
 
         <!-- =============================================== -->
 
@@ -49,9 +49,9 @@
 
         </div>
         <!-- /.content-wrapper -->
-        <?php echo $this->element('footer'); ?>
+        <?php echo $this->element('AdminLTE.footer'); ?>
         <!-- Control Sidebar -->
-        <?php echo $this->element('aside-control-sidebar'); ?>
+        <?php echo $this->element('AdminLTE.aside-control-sidebar'); ?>
 
         <!-- /.control-sidebar -->
         <!-- Add the sidebar's background. This div must be placed

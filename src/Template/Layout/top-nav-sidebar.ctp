@@ -36,10 +36,10 @@
 <div class="wrapper">
 
   <header class="main-header">
-    <?php echo $this->element('nav-top', ['layout' => 'top-nav-sidebar']); ?>
+    <?php echo $this->element('AdminLTE.nav-top', ['layout' => 'top-nav-sidebar']); ?>
   </header>
 
-    <?php echo $this->element('aside-main-sidebar'); ?>
+    <?php echo $this->element('AdminLTE.aside-main-sidebar'); ?>
 
   <!-- Full Width Column -->
   <div class="content-wrapper">
@@ -54,7 +54,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <?php echo $this->element('footer', ['layout' => 'top-nav-sidebar']); ?>
+  <?php echo $this->element('AdminLTE.footer', ['layout' => 'top-nav-sidebar']); ?>
 
 </div>
 <!-- ./wrapper -->

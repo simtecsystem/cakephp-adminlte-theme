@@ -16,78 +16,72 @@
 {% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}
 <!-- Content Header (Page header) -->
 <section class="content-header">
-  <h1>
-    {{ pluralHumanName }}
-
-    <div class="pull-right"><?php echo $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
-  </h1>
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <h1 class="m-0 col-9 col-md-10 col-lg-11"><?=__('{{ pluralHumanName }}');?></h1>
+            <div class="col-3 col-md-2 col-lg-1  text-right"><?php echo $this->Html->link(__('New'), ['action' => 'add'], ['class' => 'btn btn-success btn']) ?></div>
+        </div><!-- /.row -->
+    </div>
 </section>
 
 <!-- Main content -->
+<!-- Main content -->
 <section class="content">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title"><?php echo __('List'); ?></h3>
-
-          <div class="card-tools">
-            <form action="<?php echo $this->Url->build(); ?>" method="POST">
-              <div class="input-group input-group-sm" style="width: 150px;">
-                <input type="text" name="table_search" class="form-control pull-right" placeholder="<?php echo __('Search'); ?>">
-
-                <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card ">
+                    <!-- /.card-header -->
+                    <div class="card-body p-3">
+                        <table class="table table-responsive table-hover defaultDataTable">
+                            <thead>
+                            <tr>
+                                {% for field in fields %}
+                                    <th scope="col"><?= __('{{ field }}'); ?></th>
+                                {% endfor %}
+                                <th scope="col" class="actions text-center"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach (${{ pluralVar }} as ${{ singularVar }}): ?>
+                            <tr>
+                                {% for field in fields %}
+                                    {% set isKey = false %}
+                                    {% if associations.BelongsTo %}
+                                        {% for alias, details in associations.BelongsTo if field == details.foreignKey %}
+                                            {% set isKey = true %}
+                                            <td><?= ${{ singularVar }}->has('{{ details.property }}') ?
+                                                $this->Html->link(${{ singularVar }}->{{ details.property }}
+                                                ->{{ details.displayField }}, ['controller' => '{{ details.controller }}
+                                                ', 'action' => 'view', ${{ singularVar }}->{{ details.property }}
+                                                ->{{ details.primaryKey[0] }}]) : '' ?>
+                                            </td>
+                                        {% endfor %}
+                                    {% endif %}
+                                    {% if isKey is not same as(true) %}
+                                        {% set columnData = Bake.columnData(field, schema) %}
+                                        {% if columnData.type not in ['integer', 'float', 'decimal', 'biginteger', 'smallinteger', 'tinyinteger'] %}
+                                            <td><?= h(${{ singularVar }}->{{ field }}) ?></td>
+                                        {% else %}
+                                            <td><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></td>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+                                <td class="btn-group">
+                                    <?= $this->Html->link('<i class="fas fa-eye"></i>', ['action' => 'view', {{ pk|raw }}], ['escape' => false, 'class'=>'btn btn-info btn-sm']) ?>
+                                    <?= $this->Html->link('<i class="fas fa-pencil-alt"></i>', ['action' => 'edit', {{ pk|raw }}], ['escape' => false,'class'=>'btn btn-warning btn-sm']) ?>
+                                    <?= $this->Form->postLink('<i class="fas fa-trash-alt"></i>', ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Are you sure you want to delete # {0}?', {{ pk|raw }}), 'escape' => false, 'class'=>'btn btn-danger btn-sm']) ?>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-              </div>
-            </form>
-          </div>
+            </div>
+            <!-- /.card-body -->
         </div>
-        <!-- /.card-header -->
-        <div class="card-body table-responsive no-padding">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-  {% for field in fields %}
-                <th scope="col"><?= $this->Paginator->sort('{{ field }}') ?></th>
-  {% endfor %}
-                <th scope="col" class="actions text-center"><?= __('Actions') ?></th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach (${{ pluralVar }} as ${{ singularVar }}): ?>
-                <tr>
-{% for field in fields %}
-{% set isKey = false %}
-{% if associations.BelongsTo %}
-{% for alias, details in associations.BelongsTo if field == details.foreignKey %}
-{% set isKey = true %}
-                  <td><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></td>
-{% endfor %}
-{% endif %}
-{% if isKey is not same as(true) %}
-{% set columnData = Bake.columnData(field, schema) %}
-{% if columnData.type not in ['integer', 'float', 'decimal', 'biginteger', 'smallinteger', 'tinyinteger'] %}
-                  <td><?= h(${{ singularVar }}->{{ field }}) ?></td>
-{% else %}
-                  <td><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></td>
-{% endif %}
-{% endif %}
-{% endfor %}
-{% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
-                  <td class="actions text-right">
-                      <?= $this->Html->link(__('View'), ['action' => 'view', {{ pk|raw }}], ['class'=>'btn btn-info btn-xs']) ?>
-                      <?= $this->Html->link(__('Edit'), ['action' => 'edit', {{ pk|raw }}], ['class'=>'btn btn-warning btn-xs']) ?>
-                      <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Are you sure you want to delete # {0}?', {{ pk|raw }}), 'class'=>'btn btn-danger btn-xs']) ?>
-                  </td>
-                </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-        </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
     </div>
-  </div>
+    <!-- /.card -->
 </section>

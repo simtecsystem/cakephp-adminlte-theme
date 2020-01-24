@@ -15,68 +15,68 @@
 #}
 {% set fields = Bake.filterFields(fields, schema, modelObject) %}
 <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
-      {{ singularHumanName }}
-      <small><?php echo __('{{ action|humanize }}'); ?></small>
-    </h1>
-    <ol class="breadcrumb">
-      <li><a href="<?php echo $this->Url->build(['action' => 'index']); ?>"><i class="fa fa-dashboard"></i> <?php echo __('Home'); ?></a></li>
-    </ol>
-  </section>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <h1 class="m-0 col-9 col-md-10 col-lg-11"><?=__('{{ singularHumanName }}');?></h1>
+        </div><!-- /.row -->
+    </div>
+</section>
 
-  <!-- Main content -->
-  <section class="content">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- general form elements -->
-        <div class="card card-primary">
-          <div class="card-header with-border">
-            <h3 class="card-title"><?php echo __('Form'); ?></h3>
-          </div>
-          <!-- /.card-header -->
-          <!-- form start -->
-          <?php echo $this->Form->create(${{ singularVar }}, ['role' => 'form']); ?>
-            <div class="card-body">
-              <?php
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header with-border">
+                        <h3 class="card-title"><?php echo __('Form'); ?></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <?php echo $this->Form->create(${{ singularVar }}, ['role' => 'form']); ?>
+                    <div class="card-body">
+                        <?php
 {% for field in fields if field not in primaryKey %}
     {%- if keyFields[field] %}
         {%- set fieldData = Bake.columnData(field, schema) %}
         {%- if fieldData.null %}
                 echo $this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}, 'empty' => true]);
-            {{- "\n" }}
-        {%- else %}
-                echo $this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}]);
-            {{- "\n" }}
-        {%- endif %}
-    {%- elseif field not in ['created', 'modified', 'updated'] %}
-        {%- set fieldData = Bake.columnData(field, schema) %}
-        {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
-                echo $this->Form->control('{{ field }}', ['empty' => true]);
-            {{- "\n" }}
-        {%- else %}
-                echo $this->Form->control('{{ field }}');
-    {{- "\n" }}
-        {%- endif %}
-    {%- endif %}
-{%- endfor %}
+                        {{- "\n" }}
+                        {%- else %}
+                            echo $this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}]);
+                            {{- "\n" }}
+                        {%- endif %}
+                        {%- elseif field not in ['created', 'modified', 'updated'] %}
+                            {%- set fieldData = Bake.columnData(field, schema) %}
+                            {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
+                                echo $this->Form->control('{{ field }}', ['empty' => true]);
+                                {{- "\n" }}
+                            {%- else %}
+                                echo $this->Form->control('{{ field }}');
+                                {{- "\n" }}
+                            {%- endif %}
+                        {%- endif %}
+                        {%- endfor %}
 
-{%- if associations.BelongsToMany %}
-    {%- for assocName, assocData in associations.BelongsToMany %}
-                echo $this->Form->control('{{ assocData.property }}._ids', ['options' => ${{ assocData.variable }}]);
-    {{- "\n" }}
-    {%- endfor %}
-{% endif %}
-              ?>
+                        {%- if associations.BelongsToMany %}
+                            {%- for assocName, assocData in associations.BelongsToMany %}
+                                echo $this->Form->control('{{ assocData.property }}._ids', ['options' => ${{ assocData.variable }}]);
+                                {{- "\n" }}
+                            {%- endfor %}
+                        {% endif %}
+                        ?>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <?php echo $this->Form->submit(__('Submit')); ?>
+
+                    <?php echo $this->Form->end(); ?>
+                </div>
+                <!-- /.card -->
             </div>
-            <!-- /.card-body -->
-
-          <?php echo $this->Form->submit(__('Submit')); ?>
-
-          <?php echo $this->Form->end(); ?>
         </div>
-        <!-- /.card -->
-      </div>
-  </div>
-  <!-- /.row -->
+    </div>
+    <!-- /.row -->
 </section>

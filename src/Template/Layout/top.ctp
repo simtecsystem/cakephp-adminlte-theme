@@ -36,7 +36,7 @@
 <div class="wrapper">
 
   <header class="main-header">
-    <?php echo $this->element('nav-top', ['layout' => 'top']); ?>
+    <?php echo $this->element('AdminLTE.nav-top', ['layout' => 'top']); ?>
   </header>
   <!-- Full Width Column -->
   <div class="content-wrapper">
@@ -51,7 +51,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <?php echo $this->element('footer', ['layout' => 'top']); ?>
+  <?php echo $this->element('AdminLTE.footer', ['layout' => 'top']); ?>
 
 </div>
 <!-- ./wrapper -->

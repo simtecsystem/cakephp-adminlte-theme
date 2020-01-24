@@ -175,49 +175,49 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="/pages/UI/general" class="nav-link">
+                        <a href="/pages/ui/general" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>General</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/icons" class="nav-link">
+                        <a href="/pages/ui/icons" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Icons</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/buttons" class="nav-link">
+                        <a href="/pages/ui/buttons" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Buttons</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/sliders" class="nav-link">
+                        <a href="/pages/ui/sliders" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Sliders</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/modals" class="nav-link">
+                        <a href="/pages/ui/modals" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Modals &amp; Alerts</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/navbar" class="nav-link">
+                        <a href="/pages/ui/navbar" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Navbar &amp; Tabs</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/timeline" class="nav-link">
+                        <a href="/pages/ui/timeline" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Timeline</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/UI/ribbons" class="nav-link">
+                        <a href="/pages/ui/ribbons" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Ribbons</p>
                         </a>
