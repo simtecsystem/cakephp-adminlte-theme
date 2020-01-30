@@ -13,6 +13,11 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 #}
+<?php
+// Setting Meta TITLE for better navigation
+$this->assign('title', __('{{ singularHumanName }}'));
+?>
+
 {% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}
 <!-- Content Header (Page header) -->
 <section class="content-header">

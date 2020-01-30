@@ -13,6 +13,10 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 #}
+<?php
+// Setting Meta TITLE for better navigation
+$this->assign('title', __('{{ singularHumanName }}'));
+?>
 {% set associations = {'BelongsTo': [], 'HasOne': [], 'HasMany': [], 'BelongsToMany': []}|merge(associations) %}
 {% set fieldsData = Bake.getViewFieldsData(fields, schema, associations) %}
 {% set associationFields = fieldsData.associationFields %}
