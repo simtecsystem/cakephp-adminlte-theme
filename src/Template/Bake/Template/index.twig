@@ -16,7 +16,7 @@
 <?php
 // Setting Meta TITLE for better navigation
 $this->assign('title', __('{{ singularHumanName }}'));
-$this->assign('page_js', '');
+$this->assign('page_js', []);
 ?>
 
 {% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}

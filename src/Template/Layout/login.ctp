@@ -72,6 +72,19 @@
     <!-- AdminLTE App -->
     <?php echo $this->Html->script('AdminLTE./js/adminlte.min'); ?>
 
+    <?php
+    $pageJs = $this->fetch('page_js');
+    if(!empty($pageJs)) {
+        if(is_string($pageJs)) {
+            echo $this->Html->script($pageJs);
+        } else {
+            foreach($pageJs as $js) {
+                echo $this->Html->script($js);
+            }
+        }
+    }
+    ?>
+
     <?php echo $this->fetch('script'); ?>
     <?php echo $this->fetch('scriptBottom'); ?>
 </body>
