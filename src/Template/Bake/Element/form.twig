@@ -14,6 +14,11 @@
  */
 #}
 {% set fields = Bake.filterFields(fields, schema, modelObject) %}
+<?php
+// Setting Meta TITLE for better navigation
+$this->assign('title', __('{{ singularHumanName }}'));
+?>
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
