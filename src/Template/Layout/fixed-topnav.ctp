@@ -27,7 +27,7 @@
 
     <?php echo $this->fetch('css'); ?>
 </head>
-<body class="hold-transition sidebar-mini layout-navbar-fixed">
+<body class="hold-transition sidebar-mini layout-navbar-fixed <?= $this->fetch('custom_css_name'); ?>">
     <!-- Site wrapper -->
     <div class="wrapper">
 

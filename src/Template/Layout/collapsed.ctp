@@ -28,7 +28,7 @@
     <?php echo $this->fetch('css'); ?>
 </head>
 <!-- ADD THE CLASS sidedar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
-<body class="hold-transition sidebar-mini sidebar-collapse">
+<body class="hold-transition sidebar-mini sidebar-collapse <?= $this->fetch('custom_css_name'); ?>">
     <!-- Site wrapper -->
     <div class="wrapper">
 

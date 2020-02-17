@@ -29,7 +29,7 @@
 
 </head>
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
-<body class="hold-transition sidebar-mini layout-boxed">
+<body class="hold-transition sidebar-mini layout-boxed <?= $this->fetch('custom_css_name'); ?>">
     <!-- Site wrapper -->
     <div class="wrapper">
         <?php echo $this->element('AdminLTE.nav-top'); ?>

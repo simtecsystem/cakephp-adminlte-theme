@@ -27,7 +27,7 @@
     <?php echo $this->fetch('css'); ?>
 
 </head>
-<body class="hold-transition lockscreen">
+<body class="hold-transition lockscreen <?= $this->fetch('custom_css_name'); ?>">
     <!-- Automatic element centering -->
     <div class="lockscreen-wrapper">
         <div class="lockscreen-logo">

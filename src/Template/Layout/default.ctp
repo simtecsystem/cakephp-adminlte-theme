@@ -37,7 +37,7 @@
     <?php echo $this->fetch('css'); ?>
 
 </head>
-<body class="sidebar-mini layout-fixed">
+<body class="sidebar-mini layout-fixed  <?= $this->fetch('custom_css_name'); ?>">
     <div class="wrapper">
         <?php echo $this->element('AdminLTE.nav-top'); ?>
 

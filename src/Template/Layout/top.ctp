@@ -32,7 +32,7 @@
 
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> layout-top-nav">
+<body class="hold-transition skin-<?php echo Configure::read('Theme.skin'); ?> layout-top-nav  <?= $this->fetch('custom_css_name'); ?>">
 <div class="wrapper">
 
   <header class="main-header">

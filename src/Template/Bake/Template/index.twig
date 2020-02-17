@@ -16,7 +16,12 @@
 <?php
 // Setting Meta TITLE for better navigation
 $this->assign('title', __('{{ singularHumanName }}'));
+
+// Setting Custom JS for this screen
 $this->assign('page_js', []);
+
+// Setting custom css classs name for this screen
+$this->assign('custom_css_name', '');
 ?>
 
 {% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}

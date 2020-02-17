@@ -32,7 +32,7 @@
 
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="layout-top-nav sidebar-collapse">
+<body class="layout-top-nav sidebar-collapse <?= $this->fetch('custom_css_name'); ?>">
 <div class="wrapper">
 
   <header class="main-header">

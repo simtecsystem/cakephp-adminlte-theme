@@ -29,7 +29,7 @@
     <?php echo $this->fetch('css'); ?>
 
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page <?= $this->fetch('custom_css_name'); ?>">
     <div class="register-box">
         <div class="register-logo">
             <a href="../../index2.html"><b>Admin</b>LTE</a>
