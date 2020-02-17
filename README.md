@@ -13,7 +13,7 @@ This release is can be considered the stable version, as indicated in the [SemVe
 You can install using [composer](http://getcomposer.org).
 
 ```
-composer require maiconpinto/cakephp-adminlte-theme
+composer require simtecsystem/cakephp-adminlte-theme
 ```
 
 ### Enable Plugin
