@@ -47,7 +47,7 @@ $this->assign('custom_css_name', '');
                             <thead>
                             <tr>
                                 {% for field in fields %}
-                                    <th scope="col"><?= __('{{ field }}'); ?></th>
+                                    <th scope="col"><?= $this->Paginator->sort('{{ field }}'); ?></th>
                                 {% endfor %}
                                 <th scope="col" class="actions text-center"></th>
                             </tr>
