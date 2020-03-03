@@ -37,24 +37,26 @@ $this->assign('custom_css_name', '');
 
 <!-- Main content -->
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card ">
-                    <!-- /.card-header -->
-                    <div class="card-body p-3">
-                        <table class="table table-responsive table-hover defaultDataTable">
-                            <thead>
+    <div class="row">
+        <div class="col-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h3 class="card-title">List</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
                             <tr>
                                 {% for field in fields %}
                                     <th scope="col"><?= $this->Paginator->sort('{{ field }}'); ?></th>
                                 {% endfor %}
                                 <th scope="col" class="actions text-center"></th>
                             </tr>
-                            </thead>
-                            <tbody>
+                        </thead>
+                        <tbody>
                             <?php foreach (${{ pluralVar }} as ${{ singularVar }}): ?>
-                            <tr>
+                                <tr>
                                 {% for field in fields %}
                                     {% set isKey = false %}
                                     {% if associations.BelongsTo %}
@@ -85,13 +87,12 @@ $this->assign('custom_css_name', '');
                                 </td>
                             </tr>
                             <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <!-- /.card-body -->
         </div>
+        <!-- /.card-body -->
     </div>
     <!-- /.card -->
 </section>
